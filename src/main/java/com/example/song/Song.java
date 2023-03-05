@@ -29,22 +29,22 @@ public class Song{
     public void setsongName(String songName){
         this.songName = songName;
     }
-    public String getlyricistName(){
+    public String getlyricist(){
         return lyricist;
     }
-    public void setlyricistName(String lyricist){
+    public void setlyricist(String lyricist){
         this.lyricist = lyricist;
     }
-    public String getsingerName(){
+    public String getsinger(){
         return singer;
     }
-    public void setsingerName(String singer){
+    public void setsinger(String singer){
         this.singer = singer;
     }
-    public String getmusicDirectorName(){
+    public String getmusicDirector(){
         return musicDirector;
     }
-    public void setmusicDirectorName(String musicDirector){
+    public void setmusicDirector(String musicDirector){
         this.musicDirector = musicDirector;
     }
 }

@@ -41,11 +41,12 @@ public class SongService implements SongRepository {
     public Song addSong(Song song){
         song.setsongId(uniqueSongId);
         playlist.put(uniqueSongId, song);
+        uniqueSongId += 1;
         return song;
     }
 
     @Override
-    public Song updateSong(int songId, Song song){
+    public Song updateSong(int songId,Song song){
         Song existingSong = playlist.get(songId);
 
         if(existingSong == null){
@@ -56,16 +57,16 @@ public class SongService implements SongRepository {
             existingSong.setsongName(song.getsongName());
         }
 
-        if(song.getlyricistName() != null){
-            existingSong.setlyricistName(song.getlyricistName());
+        if(song.getlyricist() != null){
+            existingSong.setlyricist(song.getlyricist());
         }
 
-        if(song.getsingerName() != null){
-            existingSong.setsingerName(song.getsingerName());
+        if(song.getsinger() != null){
+            existingSong.setsinger(song.getsinger());
         }
         
-        if(song.getmusicDirectorName() != null){
-            existingSong.setmusicDirectorName(song.getmusicDirectorName());
+        if(song.getmusicDirector() != null){
+            existingSong.setmusicDirector(song.getmusicDirector());
         }
 
         return existingSong;
